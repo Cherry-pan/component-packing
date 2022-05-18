@@ -1,0 +1,120 @@
+$primary:#409eff !default;
+$warning:#e6a23c;
+$success:#00d100;
+$danger:#f56c6c;
+.a-button {
+    padding: 0 20px 0 20px;
+    border-width: 1px;
+    border-color: #dcdfe6;
+    border-style: solid;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    color: #606266;
+    height: 40px;
+    + .a-button {
+      margin-left: 14px;
+    }
+    > span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    i {
+      width: 14px;
+      height: 14px;
+    }
+    .icon-prefix {
+      margin-right: 10px;
+    }
+    .icon-suffix {
+      margin-left: 10px;
+    }
+  }
+  // 禁用 透明度
+  .a-button[disabled] {
+    opacity: 0.7;
+    // 鼠标变成禁用
+    cursor: not-allowed;
+  }
+  .a-button-primary {
+    border-color: $primary;
+    background-color: $primary;
+    color: white;
+    &.is-border {
+      background-color: transparent;
+      color: $primary;
+    }
+  }
+  .a-button-success {
+    border-color: $success;
+    background-color: $success;
+    color: white;
+    &.is-border {
+      background-color: transparent;
+      color: $success;
+    }
+  }
+  .a-button-warning {
+    border-color: $warning;
+    background-color: $warning;
+    color: white;
+    &.is-border {
+      background-color: transparent;
+      color: $warning;
+    }
+  }
+  .a-button-danger {
+    border-color: $danger;
+    background-color: $danger;
+    color: white;
+    &.is-border {
+      background-color: transparent;
+      color: $danger;
+    }
+  }
+  // 圆角
+  .is-round {
+    border-radius: 100px;
+  }
+  // 尺寸
+  .a-button-medium {
+    height: 36px;
+  }
+  .a-button-small {
+    height: 32px;
+    font-size: 12px;
+    padding: 0 15px 0 15px;
+    .icon-prefix {
+      margin-right: 5px;
+    }
+    .icon-suffix {
+      margin-left: 5px;
+    }
+  }
+  .a-button-mini {
+    height: 28px;
+    font-size: 12px;
+    padding: 0 15px 0 15px;
+    .icon-prefix {
+      margin-right: 5px;
+    }
+    .icon-suffix {
+      margin-left: 5px;
+    }
+  }
+  .a-button-block {
+    display: block;
+    width: 100%;
+  }
+  .icon-loading {
+    animation: loading 1s infinite linear;
+  }
+  @-webkit-keyframes loading {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
