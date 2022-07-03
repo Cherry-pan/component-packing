@@ -1,12 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import ATable from '@/components/ATable'
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
   routes: [
     {
       path: '/',
@@ -15,8 +13,8 @@ export default new Router({
     },
     {
       path: '/table',
-      name: 'ATable',
-      component: ATable
+      name: 'table',
+      component: Home
     },
   ]
 })
